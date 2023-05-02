@@ -1,0 +1,9 @@
+This is just a place for me to put some scripts that made my life easier in case it might make your life easier as well.
+
+unshorten.py - This takes a list of shortened URLs (short_urls.txt by default), visits them, and exports a list of list of lengthy URLs (unshortened_urls.txt by default). 
+
+ISRCgetter.py - This will take a text file (ISRClist.txt by default) and scan it for ISRCs, and then output any ISRC it finds to a text file (outputISRCs.txt by default). The text encoding is setup for iso-8859-1 in Windows, it might need to be changed for a Mac. It might work though, I haven't tried it.
+
+
+
+
