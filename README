@@ -4,6 +4,7 @@ unshorten.py - This takes a list of shortened URLs (short_urls.txt by default), 
 
 ISRCgetter.py - This will take a text file (ISRClist.txt by default) and scan it for ISRCs, and then output any ISRC it finds to a text file (outputISRCs.txt by default). The text encoding is setup for iso-8859-1 in Windows, it might need to be changed for a Mac. It might work though, I haven't tried it.
 
+URLgetter.py - This will take a text file (inputURLs.txt), look for all the URLs in it, and then output them to a file (outputURLs.txt).
 
 
 
