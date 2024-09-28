@@ -12,11 +12,17 @@ with open(short_urls_file, 'r') as f:
 unshortened_urls = []
 
 for short_url in short_urls:
+    short_url = short_url.strip()
+    if not short_url or not short_url.startswith(('http://', 'https://')):
+        print(f'Skipping invalid or empty URL: {short_url}')
+        continue
     try:
-        unshortened_url = urllib.request.urlopen(short_url.strip()).geturl()
+        unshortened_url = urllib.request.urlopen(short_url).geturl()
         unshortened_urls.append(re.match('^(.*?)\?', unshortened_url).group(1))
     except urllib.error.HTTPError as e:
-        print(f'Error retrieving URL {short_url.strip()}: {e}')
+        print(f'Error retrieving URL {short_url}: {e}')
+    except Exception as e:
+        print(f'Unexpected error: {e}')
 
 with open(unshortened_urls_file, 'w') as f:
     for unshortened_url in unshortened_urls:
