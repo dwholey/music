@@ -8,3 +8,4 @@ URLgetter.py - This will take a text file (inputURLs.txt), look for all the URLs
 
 nocap.py - this takes a list of messy usernames (caps.txt) and changes the capital letters to lowercase. It also removes all text before and including the @ symbol, and all text that comes after a username.
 
+usernamegetter.py - takes a messy list of URLs and scrapes the usernames from them
